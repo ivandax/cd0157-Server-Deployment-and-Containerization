@@ -226,3 +226,16 @@ Resources:
                   - s3:GetObject
                   - s3:PutObject
                   - s3:GetObjectVersion
+              - Resource: '*'
+                Effect: Allow
+                Action:
+                  - cloudformation:CreateStack
+                  - cloudformation:CreateChangeSet
+                  - cloudformation:ListStacks
+                  - "cloudformation:UpdateStack",
+                  - "cloudformation:DescribeStacks",
+                  - "cloudformation:DescribeStackResource",
+                  - "cloudformation:DescribeStackEvents",
+                  - "cloudformation:ValidateTemplate",
+                  - "cloudformation:DescribeChangeSet",
+                  - "cloudformation:ExecuteChangeSet"
